@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "https://www.stillbuildingpodcast.com/*"
+  to = "https://stillbuildingpodcast.com/:splat"
+  status = 301
+  force = true
