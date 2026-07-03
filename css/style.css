@@ -1,6 +1,6 @@
 /* ===========================
-   STILL BUILDING â€” Style Guide
-   Warm Â· Minimal Â· Reflective
+   STILL BUILDING — Style Guide
+   Warm · Minimal · Reflective
    =========================== */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
@@ -508,118 +508,6 @@ section {
   border: 1px solid var(--sage-light);
 }
 
-/* === REFLECTIONS (BLOG) === */
-.reflections-list {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.reflection-card {
-  background: var(--warm-white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.reflection-card:hover {
-  border-color: var(--stone);
-  box-shadow: 0 8px 30px rgba(42, 36, 32, 0.07);
-  transform: translateY(-2px);
-}
-
-.reflection-card-link {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1rem 1.5rem;
-  align-items: start;
-  padding: 1.75rem 2rem;
-  text-decoration: none;
-  color: inherit;
-}
-
-.reflection-card-title {
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
-  margin: 0.25rem 0 0.5rem;
-  grid-column: 1 / -1;
-}
-
-.reflection-card-excerpt {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.65;
-  margin: 0;
-  grid-column: 1;
-}
-
-.reflection-card-meta {
-  font-size: 0.85rem;
-  color: var(--text-light);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  grid-column: 1;
-}
-
-.reflection-card-meta a {
-  color: var(--brown-dark);
-}
-
-.reflection-card-meta a:hover {
-  color: var(--brown);
-}
-
-.reflection-card-arrow {
-  align-self: center;
-  grid-row: 1 / 4;
-  grid-column: 2;
-}
-
-.reflection-post-header {
-  padding: clamp(4rem, 8vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem);
-  border-bottom: 1px solid var(--border);
-}
-
-.reflection-post-meta {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-
-.reflection-post-meta a {
-  color: var(--brown-dark);
-}
-
-.reflection-post-body {
-  padding: clamp(3rem, 6vw, 5rem) 0;
-}
-
-.reflection-prose {
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.reflection-prose p {
-  margin-bottom: 1.5rem;
-}
-
-.reflection-prose p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 640px) {
-  .reflection-card-link {
-    grid-template-columns: 1fr;
-    padding: 1.5rem 1.25rem;
-  }
-
-  .reflection-card-arrow {
-    grid-row: auto;
-    grid-column: 1;
-    justify-self: start;
-    margin-top: 0.5rem;
-  }
-}
-
 /* === ABOUT / QUOTE === */
 .about-section {
   background: var(--sand);
@@ -745,7 +633,7 @@ section {
 }
 
 .notes-prose ul li::before {
-  content: 'â€”';
+  content: '—';
   position: absolute;
   left: 0;
   color: var(--stone);
@@ -796,23 +684,8 @@ section {
   background: linear-gradient(160deg, var(--sand) 0%, var(--stone) 100%);
   border-radius: var(--radius-lg);
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 0;
-  overflow: hidden;
-}
-
-.host-photo-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  flex: 1 1 auto;
-  min-height: 0;
-}
-
-.host-photo-placeholder .host-photo-caption {
-  padding: 1rem 0 0;
+  align-items: flex-end;
+  padding: 1.5rem;
 }
 
 .host-photo-caption {
@@ -976,4 +849,177 @@ section {
     text-align: left;
     font-size: 1.2rem;
   }
+}
+
+/* === REFLECTION POST PAGE === */
+.reflection-post-header {
+  padding: clamp(4rem, 8vw, 7rem) 0 clamp(2rem, 4vw, 4rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.reflection-post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+.reflection-post-meta a {
+  color: var(--brown);
+}
+
+.reflection-post-body {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+.reflection-prose {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.reflection-prose p {
+  margin-bottom: 1.4rem;
+}
+
+.reflection-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.reflection-prose h4 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--brown-dark);
+  margin: 2.5rem 0 1rem;
+}
+
+.reflection-prose ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.reflection-prose ul li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.reflection-prose ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--stone);
+}
+
+.reflection-prose a {
+  color: var(--brown);
+  text-decoration: underline;
+  text-decoration-color: var(--stone);
+}
+
+.reflection-prose a:hover {
+  color: var(--brown-dark);
+}
+
+/* === REFLECTIONS LIST PAGE === */
+.reflections-list {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.reflection-card {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reflection-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--sand);
+  transition: background 0.2s;
+}
+
+.reflection-card:hover {
+  border-color: var(--stone);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(42, 36, 32, 0.07);
+}
+
+.reflection-card:hover::before {
+  background: var(--brown);
+}
+
+.reflection-card-link {
+  display: block;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  color: inherit;
+  text-decoration: none;
+}
+
+.reflection-card-link:hover {
+  color: inherit;
+}
+
+.reflection-card .eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.reflection-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.reflection-card-excerpt {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.reflection-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  flex-wrap: wrap;
+}
+
+.reflection-card-episode a {
+  color: var(--brown);
+  font-size: 0.8rem;
+}
+
+.reflection-card-arrow {
+  position: absolute;
+  right: clamp(1.5rem, 3vw, 2.2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.reflection-card:hover .reflection-card-arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(3px);
 }
