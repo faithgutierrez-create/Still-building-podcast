@@ -680,12 +680,21 @@ section {
 }
 
 .host-photo-placeholder {
-  aspect-ratio: 4/5;
   background: linear-gradient(160deg, var(--sand) 0%, var(--stone) 100%);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
+  max-height: 480px;
+  overflow: hidden;
+}
+
+.host-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-md);
 }
 
 .host-photo-caption {
